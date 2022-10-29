@@ -7,7 +7,7 @@ def app():
     """This function create the home page"""
     
     # Add title to the home page
-    st.title("Diabetes Precdiction Web App")
+    st.title("Diabetes Prediction System")
 
     # Add image to the home page
     st.image("./images/home.png")
