@@ -8,12 +8,13 @@ from sklearn.metrics import plot_confusion_matrix
 from sklearn import tree
 import streamlit as st
 
+
 # Import necessary functions from web_functions
 from web_functions import train_model
 
 def app(df, X, y):
     """This function create the visualisation page"""
-
+    
     # Remove the warnings
     warnings.filterwarnings('ignore')
     st.set_option('deprecation.showPyplotGlobalUse', False)
@@ -31,7 +32,16 @@ def app(df, X, y):
         ax.set_ylim(bottom + 0.5, top - 0.5)                    # Increasing the bottom and decreasing the top margins respectively.
         st.pyplot(fig)
 
-        
+    if st.checkbox("Show Scatter Plot"):
+        sns.color_palette("rocket", as_cmap=True)
+        ax=sns.scatterplot(x="Glucose",y="Blood_Pressure",data=df)
+        st.pyplot()
+
+    if st.checkbox("Show Histogram"):
+        sns.color_palette("rocket", as_cmap=True)
+        ax=sns.histplot(data=df,x="Age",y="Blood_Pressure")
+        st.pyplot()
+
     if st.checkbox("Plot confusion matrix"):
         model, score = train_model(X, y)
         plt.figure(figsize = (10, 6))
