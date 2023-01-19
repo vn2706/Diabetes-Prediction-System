@@ -36,7 +36,7 @@ Building an application that can predict the onset of diabetes or the possible c
 ### Note:
 **Incase the application demo doesn't start real quick, you can get an idea about how it looks like from the screenshots**
 
-![1](https://user-images.githubusercontent.com/64016811/198821364-3c79bc84-dd52-41bb-ad4a-b0744a26cc09.png)
+
 ![2](https://user-images.githubusercontent.com/64016811/198821366-f8ee30f4-8804-4b70-acdc-99b4cb70ef72.png)
 ![3](https://user-images.githubusercontent.com/64016811/198821370-fb08c961-caaa-413c-9e89-6620a8014b76.png)
 ![4](https://user-images.githubusercontent.com/64016811/198821373-2b3c5b83-824d-4297-bf14-7848af48b967.png)
