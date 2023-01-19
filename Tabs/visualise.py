@@ -32,19 +32,19 @@ def app(df, X, y):
         ax.set_ylim(bottom + 0.5, top - 0.5)                    # Increasing the bottom and decreasing the top margins respectively.
         st.pyplot(fig)
 
-    if st.checkbox("Show Scatter Plot"):
+    if st.checkbox("Fasting Glucose Level vs Blood Pressure Plot"):
         sns.color_palette("rocket", as_cmap=True)
         ax=sns.scatterplot(x="FastingGlc",y="BloodPressure",data=df)
         st.pyplot()
 
-    if st.checkbox("Show Scatter Plot"):
+    if st.checkbox("Aftermeal Glucose Level vs Blood Pressure Plot"):
         sns.color_palette("rocket", as_cmap=True)
         ax=sns.scatterplot(x="AfterGlc",y="BloodPressure",data=df)
         st.pyplot()
 
-    if st.checkbox("Show Scatter Plot"):
+    if st.checkbox("Blood Pressure Level vs Skin Thickness Plot"):
         sns.color_palette("rocket", as_cmap=True)
-        ax=sns.scatterplot(x="SkinThickness",y="BloodPressure",data=df)
+        ax=sns.scatterplot(x="BloodPressure",y="SkinThickness",data=df)
         st.pyplot()
 
     if st.checkbox("Show Histogram"):
