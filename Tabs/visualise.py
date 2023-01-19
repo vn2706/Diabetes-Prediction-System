@@ -34,13 +34,25 @@ def app(df, X, y):
 
     if st.checkbox("Show Scatter Plot"):
         sns.color_palette("rocket", as_cmap=True)
-        ax=sns.scatterplot(x="Glucose",y="Blood_Pressure",data=df)
+        ax=sns.scatterplot(x="FastingGlc",y="BloodPressure",data=df)
+        st.pyplot()
+
+    if st.checkbox("Show Scatter Plot"):
+        sns.color_palette("rocket", as_cmap=True)
+        ax=sns.scatterplot(x="AfterGlc",y="BloodPressure",data=df)
+        st.pyplot()
+
+    if st.checkbox("Show Scatter Plot"):
+        sns.color_palette("rocket", as_cmap=True)
+        ax=sns.scatterplot(x="SkinThickness",y="BloodPressure",data=df)
         st.pyplot()
 
     if st.checkbox("Show Histogram"):
         sns.color_palette("rocket", as_cmap=True)
-        ax=sns.histplot(data=df,x="Age",y="Blood_Pressure")
+        ax=sns.histplot(data=df,x="Age",y="BloodPressure")
         st.pyplot()
+
+    
 
     if st.checkbox("Plot confusion matrix"):
         model, score = train_model(X, y)

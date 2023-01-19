@@ -12,15 +12,10 @@ def load_data():
     """This function returns the preprocessed data"""
 
     # Load the Diabetes dataset into DataFrame.
-    df = pd.read_csv('https://s3-whjr-curriculum-uploads.whjr.online/b510b80d-2fd6-4c08-bfdf-2a24f733551d.csv')
-
-    # Rename the column names in the DataFrame.
-    df.rename(columns = {"BloodPressure": "Blood_Pressure",}, inplace = True)
-    df.rename(columns = {"SkinThickness": "Skin_Thickness",}, inplace = True)
-    df.rename(columns = {"DiabetesPedigreeFunction": "Pedigree_Function",}, inplace = True)
+    df = pd.read_csv('diabetes.csv')
 
     # Perform feature and target split
-    X = df[["Glucose", "Blood_Pressure", "Insulin", "BMI", "Pedigree_Function", "Age"]]
+    X = df[["FastingGlc","AfterGlc", "BloodPressure","SkinThickness","Insulin", "BMI", "GeneticCorr", "Age"]]
     y = df['Outcome']
 
     return df, X, y

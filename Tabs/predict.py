@@ -26,15 +26,16 @@ def app(df, X, y):
     st.subheader("Select Values:")
 
     # Take input of features from the user.
-    glucose = st.slider("Glucose", int(df["Glucose"].min()), int(df["Glucose"].max()))
-    bp = st.slider("Blood_Pressure", int(df["Blood_Pressure"].min()), int(df["Blood_Pressure"].max()))
+    fg = st.slider("Fasting Glucose", int(df["FastingGlc"].min()), int(df["FastingGlc"].max()))
+    ag = st.slider("Aftermeal Glucose", int(df["AfterGlc"].min()), int(df["FastingGlc"].max()))
+    bp = st.slider("Blood Pressure", int(df["BloodPressure"].min()), int(df["BloodPressure"].max()))
     insulin = st.slider("Insulin", int(df["Insulin"].min()), int(df["Insulin"].max()))
     bmi = st.slider("BMI", float(df["BMI"].min()), float(df["BMI"].max()))
-    pedigree = st.slider("Genetic Correlation", float(df["Pedigree_Function"].min()), float(df["Pedigree_Function"].max()))
+    gc = st.slider("Genetic Correlation", float(df["GeneticCorr"].min()), float(df["GeneticCorr"].max()))
     age = st.slider("Age", int(df["Age"].min()), int(df["Age"].max()))
 
     # Create a list to store all the features
-    features = [glucose, bp, insulin, bmi, pedigree, age]
+    features = [fg, ag, bp, insulin, bmi, gc, age]
 
     # Create a button to predict
     if st.button("Predict"):
@@ -45,7 +46,7 @@ def app(df, X, y):
 
         # Print the output according to the prediction
         if (prediction == 1):
-            st.warning("The person either has high risk of diabetes")
+            st.warning("The person either has high risk of diabetes mellitus")
         else:
             st.success("The person is free from diabetes")
 
