@@ -29,14 +29,14 @@ def app(df, X, y):
     fg = st.slider("Fasting Glucose", int(df["FastingGlc"].min()), int(df["FastingGlc"].max()))
     ag = st.slider("Aftermeal Glucose", int(df["AfterGlc"].min()), int(df["FastingGlc"].max()))
     bp = st.slider("Blood Pressure", int(df["BloodPressure"].min()), int(df["BloodPressure"].max()))
-    st = st.slider("Skin Thickness", int(df["SkinThickness"].min()), int(df["SkinThickness"].max()))
+    sth = st.slider("Skin Thickness", int(df["SkinThickness"].min()), int(df["SkinThickness"].max()))
     insulin = st.slider("Insulin", int(df["Insulin"].min()), int(df["Insulin"].max()))
     bmi = st.slider("BMI", float(df["BMI"].min()), float(df["BMI"].max()))
     gc = st.slider("Genetic Correlation", float(df["GeneticCorr"].min()), float(df["GeneticCorr"].max()))
     age = st.slider("Age", int(df["Age"].min()), int(df["Age"].max()))
 
     # Create a list to store all the features
-    features = [fg, ag, bp, st, insulin, bmi, gc, age]
+    features = [fg, ag, bp, sth, insulin, bmi, gc, age]
 
     # Create a button to predict
     if st.button("Predict"):
