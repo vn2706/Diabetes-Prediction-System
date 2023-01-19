@@ -4,7 +4,7 @@
 import warnings
 import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn.metrics import plot_confusion_matrix
+
 from sklearn import tree
 import streamlit as st
 
@@ -50,14 +50,6 @@ def app(df, X, y):
     if st.checkbox("Show Histogram"):
         sns.color_palette("rocket", as_cmap=True)
         ax=sns.histplot(data=df,x="Age",y="BloodPressure")
-        st.pyplot()
-
-    
-
-    if st.checkbox("Plot confusion matrix"):
-        model, score = train_model(X, y)
-        plt.figure(figsize = (10, 6))
-        plot_confusion_matrix(model, X, y, values_format='d')
         st.pyplot()
 
     if st.checkbox("Plot Decision Tree"):
