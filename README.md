@@ -43,7 +43,3 @@ Building an application that can predict the onset of diabetes or the possible c
 ![g1](https://user-images.githubusercontent.com/64016811/198821376-406c0d3a-3f6c-4f8f-90e5-403e7ccc5d02.png)
 ![g2](https://user-images.githubusercontent.com/64016811/198821377-9f2a046c-99b7-4b06-aab2-ec1a3eb0bf95.png)
 
-### Made with 💙 by:
-![maker](https://user-images.githubusercontent.com/64016811/198821378-09bf5224-a537-4154-9df9-d9b29da95af7.jpg)
-
-## MAINAK CHAUDHURI
