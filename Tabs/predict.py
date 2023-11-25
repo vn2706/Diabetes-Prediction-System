@@ -86,6 +86,7 @@ def app(df, X, y):
             st.error("The person either has high risk of diabetes mellitus")
             if (bmi < 40 or ag < 120):
                 st.info("Inference : Low Risk (Pre-diabetic)")
+                st.write("High Glucose:",ag)
                 st.markdown('''### Remedies''')
                 components.html( """
                     <style>body{font-family:"Source Sans Pro", sans-serif;}</style>       
@@ -96,6 +97,7 @@ def app(df, X, y):
                 
             elif(bmi>40 and ag>120 and pg>0):
                 st.info("Inference: Gestational Diabetes")
+                st.write("Pregnancies are the main cause:",pg)
                 st.markdown('''### Remedies''')
                 components.html( """
                     <style>body{font-family:"Source Sans Pro", sans-serif;}</style>       
@@ -106,6 +108,7 @@ def app(df, X, y):
                 
             elif(bmi>40 and bmi < 50 or ag < 150):
                 st.info("Inference: Type 1 Diabetes")
+                st.write("High Glucose:",ag)
                 st.markdown('''### Remedies''')
                 components.html( """
                     <style>body{font-family:"Source Sans Pro", sans-serif;}</style>       
@@ -116,6 +119,7 @@ def app(df, X, y):
                 
             elif(bmi>50 or ag>160):
                 st.info("Inference: Type 2 Diabetes")
+                st.write("High Glucose:",ag)
                 st.markdown('''### Remedies''')
                 components.html( """
                     <style>body{font-family:"Source Sans Pro", sans-serif;}</style>       
